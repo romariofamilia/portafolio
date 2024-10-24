@@ -55,7 +55,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    font-size: 2.2rem;
 }
 
 #frases-header {
@@ -96,12 +96,13 @@ ul>li>a {
 }
 
 .icon {
-    font-size: 30px;
+    font-size: 2.2rem;
 }
 
 .title {
     color: rgb(237, 57, 57);
     margin-bottom: 20px;
+    font-size: 2rem;
 }
 
 .texto-container > p {
@@ -111,10 +112,11 @@ ul>li>a {
 main {
     width: 100%;
     margin-top: 20px;
-}
+} 
 
 .container {
     padding: 10px 25px;
+    margin: 45px 5%;
 }
 
 .galeria-container {
@@ -138,10 +140,12 @@ main {
     height: 100px;
     align-items: center;
     display: flex;
+    justify-content: space-between;
     background-color: rgb(227, 228, 228);
     color: rgb(8, 9, 17);
     border-radius: 0 8px /0 8px ;
-    padding: 10px 15px;
+    padding: 10px 35px;
+    cursor: pointer;
 }
 
 .premisa {
@@ -156,8 +160,8 @@ main {
 
 
 .resumen-container {
-    display: none;
-
+    transform: scale(0);
+    position: fixed;
 }
 
 .resumen-show {
@@ -167,15 +171,16 @@ main {
     background-color: rgb(227, 228, 228);
     position: absolute;
     padding: 10px;
-    font-size: 14px;
+    font-size: 1.2rem;
     width: 75%;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 3px 3px 5px rgba(237, 57, 57, 0.838);
+    transform: scale(1);
+    transition: transform 0.3s;
 }
 
 .resumen {
-
     width: 100%;
 }
 
@@ -186,11 +191,30 @@ main {
 
 .texto-container {
     color: #fff;
+    font-size: 1.2rem;
+}
+
+.subtitulos {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+.texto-escuela{
+    margin: 20px 0;
 }
 
 
 footer {
     background-color: rgb(237, 57, 57);
-    padding: 15px;
+    padding: 35px;
     margin-top: 20px;
+}
+
+
+@media (min-width: 1023px) {
+    .container {
+        margin: 45px 15%;
+    }
 }
